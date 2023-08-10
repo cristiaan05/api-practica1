@@ -1,8 +1,10 @@
 from flask import Flask,request,jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
+from flask_cors import CORS
 from sqlalchemy import text
 app=Flask(__name__)
+CORS(app)
 #app.config['SQL_ALCHEMY_DATABASE_URI']='sqlite:///database.db'
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://uwcz1z8tw0nrh0ey:OeX1Pjhhuve1VA5v0Pd8@bmotoxcjvbuzkz2ic55p-mysql.services.clever-cloud.com:3306/bmotoxcjvbuzkz2ic55p'
